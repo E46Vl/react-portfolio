@@ -224,10 +224,6 @@ REACT_APP_ENV=production
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - **JSONPlaceholder** - For providing the demo API
@@ -237,9 +233,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Portfolio**: [Your Portfolio URL]
-- **LinkedIn**: [Your LinkedIn]
-- **GitHub**: [Your GitHub]
+- **LinkedIn**: https://www.linkedin.com/in/vlo-galstyan
+- **GitHub**: https://github.com/E46Vl
+- **Phone**:+37477529269
 
 ---
 
