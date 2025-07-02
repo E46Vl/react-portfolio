@@ -1,0 +1,52 @@
+@import '../../../styles/variables';
+
+.comment-card {
+  transition: $transition-base;
+  
+  &:hover {
+    background-color: rgba($primary, 0.02);
+    border-radius: $border-radius;
+    padding: 1rem;
+    margin: 0 -1rem 1rem -1rem;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__name {
+    font-weight: 600;
+    color: $gray-800;
+  }
+
+  &__email {
+    font-size: 0.75rem;
+  }
+
+  &__body {
+    line-height: 1.6;
+    color: $gray-700;
+  }
+
+  &__date {
+    font-size: 0.75rem;
+  }
+}
+
+// Dark mode support
+[data-bs-theme="dark"] {
+  .comment-card {
+    &:hover {
+      background-color: rgba($primary, 0.1);
+    }
+
+    &__name {
+      color: $text-dark;
+    }
+
+    &__body {
+      color: lighten($text-dark, 10%);
+    }
+  }
+} 

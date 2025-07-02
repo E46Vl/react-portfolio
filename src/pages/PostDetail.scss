@@ -1,0 +1,90 @@
+@import '../styles/variables';
+
+.post-detail {
+  &__card {
+    .post-detail__title {
+      color: $gray-800;
+      font-weight: 600;
+    }
+
+    .post-detail__body {
+      line-height: 1.8;
+      color: $gray-700;
+    }
+
+    .post-detail__avatar {
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .post-detail__bookmark {
+      transition: all 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .post-detail__meta {
+      .btn {
+        transition: all 0.2s ease;
+        
+        &:hover {
+          transform: translateY(-1px);
+        }
+      }
+    }
+  }
+
+  &__comments {
+    .comment-card {
+      transition: $transition-base;
+      
+      &:hover {
+        background-color: rgba($primary, 0.02);
+      }
+    }
+  }
+
+  &__sidebar {
+    position: sticky;
+    top: 2rem;
+    
+    img {
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+  }
+}
+
+// Dark mode support
+[data-bs-theme="dark"] {
+  .post-detail {
+    &__card {
+      .post-detail__title {
+        color: $text-dark;
+      }
+
+      .post-detail__body {
+        color: lighten($text-dark, 10%);
+      }
+    }
+
+    &__comments {
+      .comment-card:hover {
+        background-color: rgba($primary, 0.1);
+      }
+    }
+  }
+} 

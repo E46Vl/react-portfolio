@@ -1,0 +1,110 @@
+@import '../../../styles/variables';
+
+.skeleton-loader {
+  &__item {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: $border-radius;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__title {
+    width: 60%;
+    height: 1rem;
+  }
+
+  &__subtitle {
+    width: 40%;
+    height: 0.875rem;
+  }
+
+  &__body {
+    width: 100%;
+    height: 3rem;
+  }
+
+  &__meta {
+    width: 30%;
+    height: 0.75rem;
+  }
+
+  &__card {
+    width: 100%;
+    height: 200px;
+  }
+
+  &__user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  &__user-name {
+    width: 70%;
+    height: 1.5rem;
+  }
+
+  &__user-info {
+    width: 100%;
+    height: 1rem;
+  }
+
+  &__post-title {
+    width: 70%;
+    height: 1.5rem;
+  }
+
+  &__post-body {
+    width: 100%;
+    height: 1rem;
+  }
+
+  &__post-meta {
+    width: 90%;
+    height: 1rem;
+  }
+
+  &__comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__comment-name {
+    width: 60%;
+    height: 1rem;
+  }
+
+  &__comment-email {
+    width: 40%;
+    height: 0.875rem;
+  }
+
+  &__comment-body {
+    width: 100%;
+    height: 3rem;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+// Dark mode support
+[data-bs-theme="dark"] {
+  .skeleton-loader__item {
+    background: linear-gradient(90deg, #3a3a3a 25%, #4a4a4a 50%, #3a3a3a 75%);
+    background-size: 200% 100%;
+  }
+} 

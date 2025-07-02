@@ -1,0 +1,70 @@
+@import '../../../styles/variables';
+
+.post-card {
+  transition: $transition-base;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $hover-shadow 0 8px 25px 0;
+  }
+
+  &__author {
+    .post-card__avatar {
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__title {
+    a {
+      color: inherit;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__body {
+    line-height: 1.6;
+  }
+
+  &__bookmark {
+    background: none;
+    border: none;
+    color: $gray-500;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      color: $warning;
+    }
+    
+    &.bookmarked {
+      color: $warning;
+    }
+  }
+
+  &__actions {
+    .btn {
+      transition: all 0.2s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+// Dark mode support
+[data-bs-theme="dark"] {
+  .post-card {
+    &__title a:hover {
+      color: lighten($primary, 10%);
+    }
+  }
+} 

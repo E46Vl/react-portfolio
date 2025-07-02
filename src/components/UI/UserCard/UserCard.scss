@@ -1,0 +1,80 @@
+@import '../../../styles/variables';
+
+.user-card {
+  transition: $transition-base;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $hover-shadow 0 8px 25px 0;
+  }
+
+  &__avatar-container {
+    .user-card__avatar {
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__name {
+    a {
+      color: inherit;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__username {
+    font-size: 0.875rem;
+  }
+
+  &__contact {
+    &-item {
+      small {
+        font-size: 0.75rem;
+        max-width: 120px;
+      }
+    }
+  }
+
+  &__bookmark {
+    background: none;
+    border: none;
+    color: $gray-500;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+    transform: translate(25%, -25%);
+    
+    &:hover {
+      color: $warning;
+    }
+    
+    &.bookmarked {
+      color: $warning;
+    }
+  }
+
+  &__actions {
+    .btn {
+      transition: all 0.2s ease;
+      
+      &:hover {
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+// Dark mode support
+[data-bs-theme="dark"] {
+  .user-card {
+    &__name a:hover {
+      color: lighten($primary, 10%);
+    }
+  }
+} 
